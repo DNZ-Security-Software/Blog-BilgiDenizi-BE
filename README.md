@@ -1,4 +1,4 @@
-# Blog-BilgiDenizi-(Back-end)
+# Blog-BilgiDenizi-(Backend)
 
 <img src="./assets/cover_diag.png" alt="cover_diag" style="zoom:67%;" />
 
