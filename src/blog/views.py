@@ -5,3 +5,6 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("This is blog home page")
+
+def commit(request):
+    return HttpResponse("This is user commit page")

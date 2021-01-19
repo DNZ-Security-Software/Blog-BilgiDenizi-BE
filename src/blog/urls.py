@@ -1,6 +1,7 @@
 from django.urls import path
-from . import views
+from .views import index, commit
 
 urlpatterns = [
-    path('', views.index),
+    path('', index),
+    path('commit/', commit),
 ]
