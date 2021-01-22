@@ -20,7 +20,6 @@ def post_create(request):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
-            # form.save()
             return redirect("blog:list")
     context = {
         'form': form
@@ -29,8 +28,7 @@ def post_create(request):
 
 
 def post_detail(request, slug):
-    # Post.objects.get(slug=learn-drf-3c78be2186)
-    obj = get_object_or_404(Post, slug=slug)  # slug = learn-drf-3c78be2186
+    obj = get_object_or_404(Post, slug=slug) 
     context = {
         "object": obj
     }
