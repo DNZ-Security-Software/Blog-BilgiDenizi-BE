@@ -8,7 +8,7 @@ def post_list(request):
     context = {
         "object_list": qs
     }
-    return render(request, "blog/post_list.html", context)
+    return render(request, "blog_api/post_list.html", context)
 
 
 def post_create(request):
@@ -20,11 +20,11 @@ def post_create(request):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
-            return redirect("blog:list")
+            return redirect("blog_api:list")
     context = {
         'form': form
     }
-    return render(request, "blog/post_create.html", context)
+    return render(request, "blog_api/post_create.html", context)
 
 
 def post_detail(request, slug):
@@ -32,7 +32,7 @@ def post_detail(request, slug):
     context = {
         "object": obj
     }
-    return render(request, "blog/post_detail.html", context)
+    return render(request, "blog_api/post_detail.html", context)
 
 
 def post_update(request, slug):
@@ -40,21 +40,21 @@ def post_update(request, slug):
     form = PostForm(request.POST or None, request.FILES or None, instance=obj)
     if form.is_valid():
         form.save()
-        return redirect("blog:list")
+        return redirect("blog_api:list")
 
     context = {
         "object": obj,
         "form": form
     }
-    return render(request, "blog/post_update.html", context)
+    return render(request, "blog_api/post_update.html", context)
 
 
 def post_delete(request, slug):
     obj = get_object_or_404(Post, slug=slug)
     if request.method == "POST":
         obj.delete()
-        return redirect("blog:list")
+        return redirect("blog_api:list")
     context = {
         "object": obj
     }
-    return render(request, "blog/post_delete.html", context)
+    return render(request, "blog_api/post_delete.html", context)
