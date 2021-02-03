@@ -8,3 +8,4 @@ def index(request):
 
 def commit(request):
     return HttpResponse("This is user commit page")
+
