@@ -1,6 +1,6 @@
 # Blog-BilgiDenizi-(Backend)
 
-<img src="./assets/cover_diag.png" alt="cover_diag" style="zoom:67%;" />
+<img src="./assets/cover_diag.png" alt="cover_diag" style="zoom:65%;" />
 
 This is my Clarusway Full-stack Developer bootcamp graduation project. It is a _blog site_ project.
 
